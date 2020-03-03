@@ -1,0 +1,43 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "resources": [
+        {
+            "type": "Microsoft.Portal/dashboards",
+            "apiVersion": "2019-01-01-preview",
+            "name": "testcase-dashboardparts-metadata-oneof-notmatched",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "lenses": {
+                    "0": {
+                        "order": 0,
+                        "parts": {
+                            "0": {
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "colSpan": 2,
+                                    "rowSpan": 1
+                                },
+                                "metadata": {
+                                    "inputs": [
+                                    ],
+                                    "type": "Extension/HubsExtension/PartType/ClockPart",
+                                    "settings": {
+                                        "content": {
+                                            "settings": {
+                                                "timezoneId": "W. Europe Standard Time",
+                                                "timeFormat": "HH:mm",
+                                                "version": 1
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
